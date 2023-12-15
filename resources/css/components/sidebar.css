@@ -1,0 +1,59 @@
+
+a, a:link, a:visited  {
+    text-decoration: none;
+    color: black;
+}
+
+a:hover  {
+    text-decoration: none;
+    color: black;
+}
+
+body, html {
+    width: 100%;
+    height: 100%;
+}
+.sidebar{
+    width: 100%;
+    height: 100%;
+    grid-area: sidebar;
+    /* border: 1px solid red; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-right: 2px solid purple;
+    border-bottom: 2px solid purple;
+}
+
+.sidebar__body{
+    width: 80%;
+    height: 95%;
+    /* border: 1px solid blue; */
+    margin-top: 20px;
+}
+
+.sidebar__refs{
+    margin-top: 10%;
+    margin-left: 20px;
+    height: fit-content;
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    /* border: 1px solid green; */
+}
+
+.sidebar__option{
+    margin: 10px 0 10px 0;
+    color: rgb(105, 0, 143);
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 600;
+    font-size: 18px;
+    transition: all .3s;
+}
+
+.sidebar__option:hover{
+    color: plum;
+}
+
+

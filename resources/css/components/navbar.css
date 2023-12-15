@@ -1,0 +1,75 @@
+.navbar {
+    height: 13vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(117, 0, 144);
+    grid-area: navbar;
+}
+
+.navbar__container {
+    width: 92%;
+    height: 50%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-right: 2%;
+}
+
+.navbar__logo {
+    color: white;
+    font-size: 32px;
+    font-family: 'Afacad', sans-serif;
+}
+
+.navbar__auth {
+    width: 15%;
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.navbar__register {
+    font-size: 18px;
+    font-family: 'Open Sans', serif;
+    text-decoration: none;
+    color: white;
+}
+
+.navbar__register:hover,
+.navbar__signin:hover {
+    transition: all .3s;
+    color: rgb(153, 255, 0);
+}
+
+.navbar__signin {
+    color: white;
+    font-size: 18px;
+    font-family: 'Open Sans', serif;
+    text-decoration: none;
+}
+
+.navbar__logout {
+    width: 10%;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.navbar__logout-btn {
+    width: 90%;
+    height: 92%;
+    border-radius: 20px;
+    background-color: rgb(223, 0, 0);
+    color: white;
+    font-size: 17px;
+    font-family: 'Open Sans', serif;
+    transition: all .3s;
+    cursor: pointer;
+}
+
+.navbar__logout-btn:hover {
+    background-color: red;
+}

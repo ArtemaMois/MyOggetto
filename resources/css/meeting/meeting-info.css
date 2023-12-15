@@ -1,0 +1,100 @@
+@import url('https://fonts.googleapis.com/css2?family=Karla:wght@500;600&family=M+PLUS+Rounded+1c:wght@500&family=Manrope:wght@600&family=PT+Sans+Caption&family=Poppins:wght@600&family=Quicksand:wght@500&family=Roboto+Mono:wght@500;600&family=Roboto+Slab:wght@500&family=Roboto:ital@1&family=Rubik:wght@500&display=swap');
+
+.meeting-info{
+    width: 95%;
+    height: 90vh;
+    /* border: 1px solid red; */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+.meeting-info__title{
+    margin: 0 0 0 3%;
+    height: 10%;
+    width: 90%;
+    display: flex;
+    align-items: center;
+    /* border: 1px solid blue; */
+    font-size: 1.7vw;
+    font-family: 'Fira Sans', sans-serif;
+    font-weight: 600;
+    letter-spacing: 1px;
+}
+
+.meeting-info__body{
+    width: 95%;
+    height: 55%;
+    display: flex;
+    justify-content: space-between;
+    /* border: 1px solid peru; */
+    margin-left: 3%;
+}
+
+.meeting-info__video{
+    width: 60%;
+    height: 97%;
+    border: 3px solid rgb(154, 0, 210);
+    border-radius: 30px;
+}
+
+.meeting-info__table{
+    width: 35%;
+    height: 50%;
+    /* border: 1px solid blue; */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    margin-left: 10%;
+}
+
+.meeting-info__theme{
+    font-size: 1.5vw;
+    font-family: 'Alegreya', sans-serif;
+    font-weight: 600;
+    margin-left: 1%;
+    line-height: 1.7vw;
+}
+
+.meeting-info__lector{
+    font-size: 1.5vw;
+    font-family: 'Alegreya', sans-serif;
+    font-weight: 600;
+    margin-left: 1%;
+    line-height: 1.8vw;
+    transition: all .3s;
+}
+
+.meeting-info__lector:hover{
+    color: blueviolet;
+}
+
+.meeting-info__description{
+    width: fit-content;
+    height: fit-content;
+    font-family: 'Fira Sans', sans-serif;
+    font-size: 1.2vw;
+    margin-left: 4%;
+    line-height: 2vw;
+}
+
+.meeting-info__materials{
+    width: fit-content;
+    height: fit-content;
+    font-family: 'Fira Sans', sans-serif;
+    font-size: 1.2vw;
+    margin-left: 4%;
+    line-height: 2vw;
+}
+
+.meeting-info__text{
+    color: rgb(141, 141, 141);
+    font-size: 1.3vw;
+    font-family: 'Manrope', sans-serif;
+    transition: all .3s;
+}
+
+
+.meeting-info__text:hover{
+    color: rgb(141, 141, 141);
+}
