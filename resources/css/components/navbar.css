@@ -1,4 +1,5 @@
 .navbar {
+    width: 100vw;
     height: 13vh;
     display: flex;
     justify-content: center;
@@ -15,6 +16,7 @@
     align-items: center;
     padding-right: 2%;
 }
+
 
 .navbar__logo {
     color: white;

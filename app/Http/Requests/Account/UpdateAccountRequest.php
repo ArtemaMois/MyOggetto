@@ -11,8 +11,8 @@ class UpdateAccountRequest extends FormRequest
     {
         return [
             'name' => ['string', 'max:60'],
-            'email' => ['unique:users,email'],
-            'password' => ['min:6'],
+            'email' => ['email'],
+            'password' => [],
             'profile_id' => ['exists:profile,id']
         ];
     }

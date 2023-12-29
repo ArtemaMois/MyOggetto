@@ -1,0 +1,286 @@
+.meeting-update__header {
+    width: 70vw;
+    height: 8vh;
+    font-size: 30px;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 600;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.meeting-update__delete{
+    width: 10vw;
+    height: 6vh;
+}
+
+.meeting-update__delete-btn{
+    width: 100%;
+    height: 100%;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 16px;
+    border-radius: 20px;
+    color: white;
+    background-color: rgb(177, 0, 0);
+    border: 2px solid rgb(177, 0, 0);
+    transition: all .3s;
+}
+
+.meeting-update__delete-btn:hover{
+    background-color: white;
+    color: rgb(177, 0, 0);
+}
+
+.meeting-update__form {
+    width: 85%;
+    height: fit-content;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    margin: 3vh 0 0 3vh;
+    padding: 2% 2% 0 2%;
+}
+
+.meeting-update__title {
+    width: 50%;
+    height: 17%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.meeting-update__titlelable,
+.meeting-update__themelabel,
+.meeting-update__materialstext,
+.meeting-update__datelabel,
+.meeting-update__descriptionlabel {
+    font-size: 24px;
+    font-family: 'Jost', sans-serif;
+}
+
+.meeting-update__titleinp {
+    margin: 10px 0 0 10px;
+    line-height: 32px;
+    border: 3px solid rgb(112, 0, 241);
+    border-radius: 14px;
+    padding: 2px 0 2px 5px;
+    font-size: 18px;
+    font-family: 'Fira Sans', sans-serif;
+    letter-spacing: 1px;
+}
+
+.meeting-update__description-container {
+    width: 70%;
+    height: 40vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.meeting-update__descriptioninp {
+    width: 100%;
+    height: 65%;
+    border: 3px solid rgb(112, 0, 241);
+    border-radius: 15px;
+    padding: 1%;
+    margin-left: 1%;
+    font-size: 18px;
+    font-family: 'Fira Sans', sans-serif;
+    letter-spacing: 1px;
+}
+
+.meeting-update__theme-container {
+    width: 25%;
+    height: 12%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.meeting-update__theme {
+    width: 100%;
+    height: 80%;
+    /* border: 1px solid blue; */
+    display: flex;
+    justify-content: space-between;
+    align-items: end;
+}
+
+.meeting-update__themeinp {
+    width: 90%;
+    height: 4vh;
+    margin-left: 2vh;
+    border: 2px solid rgb(112, 0, 241);
+    font-size: 18px;
+    font-family: 'Fira Sans';
+    letter-spacing: 1px;
+    overflow: scroll;
+}
+
+
+.meeting-update__date-container {
+    width: 38%;
+    height: 15%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: start;
+}
+
+.meeting-update__date {
+    width: 100%;
+    height: 80%;
+    display: flex;
+    justify-content: space-between;
+    align-items: end;
+    /* border: 1px solid red; */
+}
+
+.meeting-update__dateinp {
+    width: 42%;
+    font-family: 'Fira Sans', sans-serif;
+    font-size: 20px;
+}
+
+.meeting-update__materials-container {
+    width: 70%;
+    height: 15%;
+    margin-bottom: 2vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.meeting-update__materials {
+    width: 65vw;
+    height: 8vh;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.meeting-update__uploadsinp {
+    width: 0.1px;
+    height: 0.1px;
+    opacity: 0;
+    overflow: hidden;
+    position: absolute;
+    z-index: -1;
+}
+
+.meeting-update__uploadsinp+label {
+    font-family: "Open Sans", sans-serif;
+    width: 12vw;
+    height: 6vh;
+    font-size: 1em;
+    font-weight: 700;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    background-color: #5a00e2c4;
+    border: 1px solid green;
+    /* display: inline-block; */
+    /* padding: 20px; */
+    border-radius: 5px;
+    transition: all .3s;
+}
+
+.meeting-update__files {
+    width: 25vw;
+    height: fit-content;
+    display: flex;
+    flex-direction: column;
+    margin-left: 3vw;
+    /* border: 1px solid red; */
+}
+.meeting-update__files-header{
+    font-family: 'Jost', sans-serif;
+    font-size: 24px;
+    margin-bottom: 3%;
+}
+
+.meeting-update__file-form {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    margin-left: 5%;
+    /* border: 1px solid blue; */
+}
+
+.meeting-update__delete-file {
+    width: 0.8em;
+    height: 0.8em;
+    background-color: black;
+    clip-path: polygon(20% 0%, 0% 20%, 30% 50%, 0% 80%, 20% 100%, 50% 70%, 80% 100%, 100% 80%, 70% 50%, 100% 20%, 80% 0%, 50% 30%);
+}
+
+.meeting-update__file-ref {
+    width: fit-content;
+    height: fit-content;
+    font-size: 16px;
+    font-family: 'Fira Sans', sans-serif;
+    margin: 1vh 0 1vh 0;
+    /* border: 1px solid blue; */
+}
+
+.meeting-update__file-ref:hover {
+    color: rgb(93, 0, 169);
+}
+
+.meeting-update__uploadsinp:focus+label,
+.meeting-update__uploadsinp+label:hover {
+    background-color: #4a00b9c4;
+}
+
+.meeting-update__file-btn {
+    position: relative;
+    display: inline-block;
+    cursor: pointer;
+    outline: none;
+    text-decoration: none;
+    font-size: 14px;
+    vertical-align: middle;
+    color: rgb(255 255 255);
+    text-align: center;
+    border-radius: 4px;
+    background-color: #5a00e2c4;
+    line-height: 22px;
+    height: 40px;
+    padding: 10px 20px;
+    box-sizing: border-box;
+    border: none;
+    margin: 0;
+    transition: background-color 0.2s;
+}
+
+
+.meeting-update__btn {
+    width: 30vw;
+    height: 6vh;
+    display: flex;
+    justify-content: end;
+
+}
+
+.meeting-update__button {
+    border-radius: 2vw;
+    color: white;
+    background-color: rgb(0, 167, 6);
+    width: 8vw;
+    height: 6vh;
+    font-size: 18px;
+    font-family: 'Roboto Mono', sans-serif;
+    font-weight: 500;
+    letter-spacing: 1.5px;
+}
+
+.meeting-update__error {
+    margin: 1vh 0 0 1vh;
+    width: 15vw;
+    height: 5vh;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 12px;
+    color: red;
+}

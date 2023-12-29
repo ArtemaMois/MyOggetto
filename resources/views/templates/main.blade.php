@@ -13,7 +13,13 @@
     '/resources/css/meeting/meetings.css',
     '/resources/css/components/sidebar.css',
     '/resources/css/meeting/meeting-info.css',
-    '/resources/css/account/account-update.css'])
+    '/resources/css/account/account-update.css',
+    '/resources/css/comments/comment.css',
+    '/resources/css/lectors/lectors.css',
+    '/resources/css/meeting/meeting-create.css',
+    '/resources/css/meeting/meeting-update.css',
+    '/resources/js/meetings/meeting-file-btn.js',
+    '/resources/js/meetings/delete-files.js'])
 </head>
 <body>
     <style>

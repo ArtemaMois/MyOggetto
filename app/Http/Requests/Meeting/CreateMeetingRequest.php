@@ -11,11 +11,12 @@ class CreateMeetingRequest extends FormRequest
     public function rules()
     {
         return [
-            'title' => ['string', 'max:100', 'min:3'],
-            'description' => ['string', 'min:5', 'max:250'],
+            'title' => [ 'required', 'string', 'max:100'],
+            'description' => ['required', 'string', 'max:300'],
             'date' =>['required', 'date'],
-            'lector_id' => ['integer','nullable', 'exists:lectors,id'],
-            'theme_id' => ['integer', 'nullable', 'exists:themes,id']
+            'theme_id' => ['required' ,'integer', 'exists:themes,id'],
+            'uploads' => ['array', 'max:5'],
+            'uploads.*' => ['max:20480']
         ];
     }
 }

@@ -4,7 +4,8 @@
 @section('content')
     <div class="account">
         <div class="account__header">Аккаунт</div>
-        <form action="" method="POST" class="account__form">
+        <form action="{{ route('update', ['user' => auth()->user()]) }}" method="POST" class="account__form">
+            @method('PATCH')
             @csrf
             <div class="account__name">
                 <label for="account__name-inp" class="account__name-label">Имя</label>
@@ -30,6 +31,9 @@
                 <label for="account__password-inp" class="account__password-label">Пароль</label>
                 <input type="password" name="password" class="account__password-inp @error('password') is_invalid @enderror"
                     value="">
+            </div>
+            <div class="account__button">
+                <button type="submit" class="account__update-btn">Сохранить</button>
             </div>
         </form>
     </div>

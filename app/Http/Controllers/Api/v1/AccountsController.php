@@ -10,6 +10,7 @@ use App\Http\Requests\Account\SignInAccountRequest;
 use App\Http\Requests\Account\UpdateAccountRequest;
 use App\Facades\Account;
 use Illuminate\Auth\Events\Registered;
+use Illuminate\Support\Facades\Hash;
 
 class AccountsController extends Controller
 {
@@ -32,8 +33,10 @@ class AccountsController extends Controller
 
     public function update(UpdateAccountRequest $request, User $user)
     {
-        $user->update($request->validated());
-        return responseOk();
+        $data = $request->validated();
+        // $data['password'] = Hash::make($request->input('password'));
+        $user->update($data); //TODO
+        return redirect()->back();
     }
 
     public function loginForm()
@@ -43,7 +46,9 @@ class AccountsController extends Controller
 
     public function login(SignInAccountRequest $request)
     {
-        auth()->attempt($request->validated());
+        if(!auth()->attempt($request->validated())){
+            return redirect()->back()->withErrors(['error' => 'Неверный логин или пароль']);
+        };
         return redirect()->route('meeting.index');
     }
 

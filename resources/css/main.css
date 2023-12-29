@@ -42,8 +42,14 @@ table {
 	border-spacing: 0;
 }
 
+body{
+    height: fit-content;
+    overflow-x: hidden;
+}
+
 
 main{
+    height: fit-content;
     display: grid;
     grid-template-rows: 13vh 1fr;
     grid-template-columns: 15vw 1fr;
@@ -54,9 +60,8 @@ main{
 }
 
 .content{
-    width: 92%;
-    margin: 30px 0 0 20px;
+    width: 90vw;
+    margin: 3vw 0 0 4vw;
     grid-area: content;
-    height: fit-content;
-    /* border: 1px solid red; */
+    /* height: 150vh; */
 }

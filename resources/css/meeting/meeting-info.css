@@ -1,15 +1,22 @@
 @import url('https://fonts.googleapis.com/css2?family=Karla:wght@500;600&family=M+PLUS+Rounded+1c:wght@500&family=Manrope:wght@600&family=PT+Sans+Caption&family=Poppins:wght@600&family=Quicksand:wght@500&family=Roboto+Mono:wght@500;600&family=Roboto+Slab:wght@500&family=Roboto:ital@1&family=Rubik:wght@500&display=swap');
 
-.meeting-info{
+label,
+textarea {
+    font-size: 0.8rem;
+    letter-spacing: 1px;
+    border: 0px solid white;
+}
+
+.meeting-info {
     width: 95%;
-    height: 90vh;
+    height: fit-content;
     /* border: 1px solid red; */
     display: flex;
     flex-direction: column;
     justify-content: space-around;
 }
 
-.meeting-info__title{
+.meeting-info__title {
     margin: 0 0 0 3%;
     height: 10%;
     width: 90%;
@@ -22,23 +29,23 @@
     letter-spacing: 1px;
 }
 
-.meeting-info__body{
+.meeting-info__body {
     width: 95%;
     height: 55%;
     display: flex;
     justify-content: space-between;
     /* border: 1px solid peru; */
-    margin-left: 3%;
+    margin: 3% 0 3% 3%;
 }
 
-.meeting-info__video{
-    width: 60%;
-    height: 97%;
+.meeting-info__video {
+    width: 40vw;
+    height: 40vh;
     border: 3px solid rgb(154, 0, 210);
     border-radius: 30px;
 }
 
-.meeting-info__table{
+.meeting-info__table {
     width: 35%;
     height: 50%;
     /* border: 1px solid blue; */
@@ -48,7 +55,7 @@
     margin-left: 10%;
 }
 
-.meeting-info__theme{
+.meeting-info__theme {
     font-size: 1.5vw;
     font-family: 'Alegreya', sans-serif;
     font-weight: 600;
@@ -56,7 +63,7 @@
     line-height: 1.7vw;
 }
 
-.meeting-info__lector{
+.meeting-info__lector {
     font-size: 1.5vw;
     font-family: 'Alegreya', sans-serif;
     font-weight: 600;
@@ -65,11 +72,11 @@
     transition: all .3s;
 }
 
-.meeting-info__lector:hover{
+.meeting-info__lector:hover {
     color: blueviolet;
 }
 
-.meeting-info__description{
+.meeting-info__description {
     width: fit-content;
     height: fit-content;
     font-family: 'Fira Sans', sans-serif;
@@ -78,7 +85,7 @@
     line-height: 2vw;
 }
 
-.meeting-info__materials{
+.meeting-info__materials {
     width: fit-content;
     height: fit-content;
     font-family: 'Fira Sans', sans-serif;
@@ -87,14 +94,80 @@
     line-height: 2vw;
 }
 
-.meeting-info__text{
+.meeting-info__text {
     color: rgb(141, 141, 141);
     font-size: 1.3vw;
     font-family: 'Manrope', sans-serif;
     transition: all .3s;
+    font-weight: 600;
 }
 
 
-.meeting-info__text:hover{
+.meeting-info__text:hover {
     color: rgb(141, 141, 141);
 }
+
+
+.meeting-info__comments {
+    margin: 1% 0 0 3%;
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+    height: fit-content;
+    /* border: 1px solid blue; */
+}
+
+.meeting-info__subheader {
+    margin: 2% 0 2% 1%;
+    color: rgb(160, 160, 160);
+    font-size: 22px;
+    font-family: 'Fira Sans', sans-serif;
+    letter-spacing: 1px;
+}
+
+.meeting-info__form{
+    margin:0 0 2% 3%;
+    width: 100%;
+    height: fit-content;
+}
+
+
+.meeting-info__comment-body{
+    width: fit-content;
+    height: fit-content;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.meeting-info__textarea{
+    width: 80%;
+    height: 15%;
+    border-radius: 10px;
+    border: 2px solid rgb(143, 112, 216);
+    font-family: 'Roboto', sans-serif;
+    font-size: 16px;
+    resize: none;
+    padding: 1%;
+}
+
+.meeting-info__btn{
+    width: 15%;
+    height: 5vh;
+    border-radius: 15px;
+    background-color: rgba(54, 54, 255, 0.832);
+    font-family: 'Open Sans', sans-serif;
+    font-size: 16px;
+    color: white;
+}
+
+.meeting-info__list{
+    width: 90%;
+    height:fit-content;
+    display: flex;
+    flex-direction: column;
+}
+
+
+
+

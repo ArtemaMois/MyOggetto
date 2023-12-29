@@ -10,11 +10,12 @@ class UpdateMeetingRequest extends FormRequest
     public function rules()
     {
         return [
-            'title' => ['string', 'max:100', 'min:3'],
-            'description' => ['string', 'min:5', 'max:250'],
-            'date' =>[ 'date'],
-            'lector_id' => [ 'integer', 'exists:lectors,id'],
-            'theme_id' => ['integer', 'exists:themes,id']
+            'title' => ['string', 'max:100'],
+            'description' => ['string', 'max:300'],
+            'date' =>['date'],
+            'theme_id' => ['exists:themes,id'],
+            'uploads' => ['array', 'max:5'],
+            'uploads.*' => ['file', 'max:20480']
         ];
     }
 }

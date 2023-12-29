@@ -16,7 +16,7 @@ class CommentsController extends Controller
         $data['meeting_id'] = $meeting->id;
         $data['user_id'] = auth()->user()->id;
         Comment::query()->create($data);
-        return responseOk();
+        return redirect()->back();
     }
 
     public function destroy(Meeting $meeting)

@@ -14,7 +14,8 @@ class LectorsController extends Controller
 {
     public function index()
     {
-        return MinifiedLectorResource::collection(Lector::all());
+        $lectors = MinifiedLectorResource::collection(Lector::all());
+        return view('lector.lectors', ['lectors' => $lectors]);
     }
 
     public function create(CreateLectorRequest $request)
