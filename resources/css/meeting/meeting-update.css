@@ -87,6 +87,7 @@
     font-size: 18px;
     font-family: 'Fira Sans', sans-serif;
     letter-spacing: 1px;
+    resize: none;
 }
 
 .meeting-update__theme-container {

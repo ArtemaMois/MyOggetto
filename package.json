@@ -9,5 +9,8 @@
         "axios": "^1.6.1",
         "laravel-vite-plugin": "^0.8.1",
         "vite": "^4.5.1"
+    },
+    "dependencies": {
+        "jquery": "^3.7.1"
     }
 }

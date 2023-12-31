@@ -18,8 +18,16 @@
     '/resources/css/lectors/lectors.css',
     '/resources/css/meeting/meeting-create.css',
     '/resources/css/meeting/meeting-update.css',
+    '/resources/css/events/event-create.css',
+    '/resources/css/events/events.css',
+    '/resources/css/events/event-info.css',
+    '/resources/css/events/event-update.css',
+    'resources/css/account/account-admin-create.css',
+    '/resources/css/account/account-users.css',
+    '/resources/css/lectors/lector-info.css',
     '/resources/js/meetings/meeting-file-btn.js',
-    '/resources/js/meetings/delete-files.js'])
+    '/resources/js/meetings/delete-files.js',
+    '/resources/js/bootstrap.js'])
 </head>
 <body>
     <style>

@@ -37,6 +37,7 @@ class User extends Authenticatable implements MustVerifyEmail
         'is_active' => 'bool'
     ];
 
+
     public function meetings(): BelongsToMany
     {
         return $this->belongsToMany(Meeting::class);

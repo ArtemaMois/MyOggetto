@@ -1,0 +1,108 @@
+.lector-info__header{
+    width: fit-content;
+    height: fit-content;
+    font-family: 'Jost', sans-serif;
+    font-size: 28px;
+}
+
+.lector-info__content{
+    margin-top: 2vh;
+    width: 90%;
+    height: fit-content;
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+}
+
+.lector-info__name{
+    width: fit-content;
+    height: fit-content;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 32px;
+}
+
+.lector-info__theme{
+    margin-top: 6vh;
+    width: fit-content;
+    height: fit-content;
+    display: flex;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 20px;
+}
+
+.lector-info__theme-text{
+    width: fit-content;
+    height: 100%;
+    color: rgb(144, 24, 255);
+}
+
+.lector-info__theme-value{
+    margin-left: 1vw;
+    width: fit-content;
+    height: 100%;
+}
+
+.lector-info__email{
+    margin-top: 5vh;
+    width: fit-content;
+    height: fit-content;
+    display: flex;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 20px;
+}
+
+.lector-info__email-text{
+    width: fit-content;
+    height: fit-content;
+    color: rgb(144, 24, 255);
+}
+
+.lector-info__email-value{
+    width: fit-content;
+    height: fit-content;
+    margin-left: 1vw;
+}
+
+.lector-info__description{
+    margin-top: 5vh;
+    width: 80%;
+    height: fit-content;
+    display: flex;
+    flex-direction: column;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 20px;
+    line-height: 25px;
+}
+
+.lector-info__description-text{
+    width: fit-content;
+    height: fit-content;
+    color: rgb(144, 24, 255);
+}
+
+.lector-info__description-value{
+    width: fit-content;
+    height: fit-content;
+    margin-top: 1vh;
+}
+
+.lector-info__meetings{
+    margin-top: 5vh;
+    width: fit-content;
+    height: 6vh;
+    display: flex;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 20px;
+}
+
+.lector-info__meetings-text{
+    width: fit-content;
+    height: fit-content;
+    color: rgb(144, 24, 255);
+}
+
+.lector-info__meetings-value{
+    width: fit-content;
+    height: fit-content;
+    margin-left: 1vw;
+}

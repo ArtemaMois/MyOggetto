@@ -11,7 +11,13 @@
         <div class="meeting__lector">
             <div class="meeting__text">Лектор:</div>{{ $meeting->lector->name }}
         </div>
-        <div class="meeting__description">{{ $meeting->description }}</div>
+        <div class="meeting__description">
+            @if(Str::length($meeting->description) > 80)
+                {{ Str::of($meeting->description)->limit(70, '...') }}
+            @else
+                {{ $meeting->description }}
+            @endif
+        </div>
         <div class="meeting__date">
             <div class="meeting__text">Дата проведения:</div> {{ $meeting->date }}
         </div>

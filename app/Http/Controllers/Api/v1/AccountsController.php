@@ -9,6 +9,9 @@ use App\Http\Requests\Account\CreateAccountRequest;
 use App\Http\Requests\Account\SignInAccountRequest;
 use App\Http\Requests\Account\UpdateAccountRequest;
 use App\Facades\Account;
+use App\Http\Requests\Account\SearchUsersRequest;
+use App\Models\Profile;
+use App\Models\Theme;
 use Illuminate\Auth\Events\Registered;
 use Illuminate\Support\Facades\Hash;
 
@@ -21,6 +24,7 @@ class AccountsController extends Controller
     }
     public function store(CreateAccountRequest $request)
     {
+        dd($request->validated());
         $user = Account::createAccount($request->validated());
         event(new Registered($user));
         return view('account.login');
@@ -31,6 +35,8 @@ class AccountsController extends Controller
         return view('account.account');
     }
 
+
+    //Доделать сброс пароля
     public function update(UpdateAccountRequest $request, User $user)
     {
         $data = $request->validated();
@@ -46,7 +52,7 @@ class AccountsController extends Controller
 
     public function login(SignInAccountRequest $request)
     {
-        if(!auth()->attempt($request->validated())){
+        if (!auth()->attempt($request->validated())) {
             return redirect()->back()->withErrors(['error' => 'Неверный логин или пароль']);
         };
         return redirect()->route('meeting.index');
@@ -58,14 +64,38 @@ class AccountsController extends Controller
         return redirect()->route('loginForm');
     }
 
-    public function adminCreateUser(CreateAccountRequest $request)
+    public function adminCreateUserForm()
     {
-        User::query()->create($request->validated());
+        $themes = Theme::all();
+        $profiles = Profile::query()->orderBy('id', 'desc')->get();
+        return view('account.account_admin_create', [
+            'profiles' => $profiles,
+            'themes' => $themes
+        ]);
     }
 
-    public function activeAccount(User $user)
+    public function adminCreateUser(CreateAccountRequest $request)
+    {
+        $user = Account::adminCreateAccount($request->validated());
+        event(new Registered($user));
+        return redirect()->back();
+    }
+
+    public function getUsers()
+    {
+        $users = Account::getSortedUsers();
+        return view('account.account_users', ['users' => $users]);
+    }
+
+    public function accountActivity(User $user)
     {
         Account::changeActivity($user);
-        return responseOk();
+        return redirect()->back();
+    }
+
+    public function searchUsers(SearchUsersRequest $request)
+    {
+        $users = Account::serchedUsers($request->input('name'));
+        return view('account.account_users', ['users' => $users]);
     }
 }

@@ -13,13 +13,29 @@ class EventsController extends Controller
 {
     public function index()
     {
-        return MinifiedEventResource::collection(Event::all());
+        $events = Event::all();
+        return view('event.events', ['events' => $events]);
     }
 
-    public function create(CreateEventRequest $request)
+    public function show(Event $event)
+    {
+        return view('event.event_info', ['event' => $event]);
+    }
+
+    public function create()
+    {
+        return view('event.event_create');
+    }
+
+    public function store(CreateEventRequest $request)
     {
         Event::query()->create($request->validated());
-        return responseOk();
+        return redirect()->back();
+    }
+
+    public function change(Event $event)
+    {
+        return view('event.event_update', ['event' => $event]);
     }
 
     public function update(UpdateEventRequest $request, Event $event)
@@ -32,6 +48,6 @@ class EventsController extends Controller
     public function destroy(Event $event)
     {
         $event->delete();
-        return responseOk();
+        return redirect()->route('event.index');
     }
 }

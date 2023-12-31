@@ -27,6 +27,23 @@
                         <div class="sidebar__option">Редактировать конференцию</div>
                     </a>
                 @endif
+                @if (auth()->user()->profile_id === 1)
+                    <a href="{{ route('event.index') }}">
+                        <div class="sidebar__option">События</div>
+                    </a>
+                    <a href="{{ route('event.create') }}">
+                        <div class="sidebar__option">Создать событие</div>
+                    </a>
+                    <a href="{{ route('account.admin.create') }}">
+                        <div class="sidebar__option">Добавить пользователя</div>
+                    </a>
+                    <a href="{{ route('account.users') }}">
+                        <div class="sidebar__option">Пользователи</div>
+                    </a>
+                    <a href="{{ route('lector.index') }}">
+                        <div class="sidebar__option">Лекторы</div>
+                    </a>
+                @endif
             </div>
         </div>
     </div>
