@@ -11,8 +11,6 @@ class CreateAnswerRequest extends FormRequest
     {
         return [
             'body' => ['required', 'string', 'max:500'],
-            'user_id' => ['required', 'exists:users,id'],
-            'quiz_id' => ['required', 'exists:quizes,id']
         ];
     }
 }

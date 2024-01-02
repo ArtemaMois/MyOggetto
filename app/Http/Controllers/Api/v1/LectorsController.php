@@ -41,6 +41,7 @@ class LectorsController extends Controller
 
     public function update(UpdateLectorRequest $request, Lector $lector)
     {
+        // dd($request->validated());
         if (!empty($request->email)) {
             if ($lector->email !== $request->email) {
                 $user = User::query()->where('email', $lector->email)->first();
@@ -48,12 +49,12 @@ class LectorsController extends Controller
             }
         }
         $lector->update($request->validated());
-        return new MinifiedLectorResource($lector);
+        return redirect()->route('lector.index');
     }
 
     public function destroy(Lector $lector)
     {
         $lector->delete();
-        return responseOk();
+        return redirect()->route('lector.index');
     }
 }

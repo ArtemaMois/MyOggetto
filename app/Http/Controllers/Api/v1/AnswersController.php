@@ -6,13 +6,17 @@ use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use App\Models\Answer;
 use App\Http\Requests\Answer\CreateAnswerRequest;
+use App\Models\Quiz;
 
 class AnswersController extends Controller
 {
-    public function create(CreateAnswerRequest $request)
+    public function create(CreateAnswerRequest $request, Quiz $quiz)
     {
-        Answer::query()->create($request->validated());
-        return responseOk();
+        $data['body'] = $request->body;
+        $data['quiz_id'] = $quiz->id;
+        $data['user_id'] = auth()->user()->id;
+        Answer::query()->create($data);
+        return redirect()->back();
     }
 
     public function destroy(Answer $answer)

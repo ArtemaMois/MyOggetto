@@ -1,0 +1,196 @@
+.lector-update__header{
+    width: 70%;
+    height: fit-content;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.lector-update__header-text{
+    font-family: 'Jost', sans-serif;
+    font-size: 28px;
+}
+
+.lector-update__delete{
+    width: 9vw;
+    height: 5vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.lector-update__delete-btn{
+    width: 100%;
+    height: 100%;
+    border: 2px solid rgb(184, 0, 0);
+    font-family: 'Open Sans', sans-serif;
+    font-size: 16px;
+    display: flex;
+    background-color: rgb(184, 0, 0);
+    border-radius: 20px;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    transition: all .3s;
+}
+
+.lector-update__delete-btn:hover{
+    background-color: white;
+    color: rgb(184, 0, 0);
+}
+
+.lector-update__content{
+    margin-top: 5vh;
+    width: 90%;
+    height: fit-content;
+    display: flex;
+    flex-direction: column;
+    /* border: 1px solid blue; */
+}
+
+.lector-update__name{
+    width: 80%;
+    height: fit-content;
+    display: flex;
+    flex-direction: column;
+    /* border: 1px solid red; */
+}
+
+.lector-update__name-label, .lector-update__theme-label, .lector-update__description-label, .lector-update__email-label{
+    font-family: 'Jost', sans-serif;
+    font-size: 24px;
+}
+
+.lector-update__name-input{
+    margin: 2vh 0 0 2vw;
+    width: 80%;
+    height: 5vh;
+    border-radius: 20px;
+    border: 3px solid rgb(107, 0, 169);
+    font-family: 'Open Sans', sans-serif;
+    font-size: 20px;
+    padding: 0.5vh 0.5vw 0.5vh 0.5vw;
+}
+
+.lector-update__theme{
+    width: 50%;
+    height: fit-content;
+    margin: 3vh 0 0 0;
+    display: flex;
+    justify-content: space-between;
+    /* border: 1px solid blue; */
+}
+
+.lector-update__select-theme{
+    width: fit-content;
+    height: 4vh;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 18px;
+}
+
+.lector-update__option-theme{
+    font-family: 'Open Sans', sans-serif;
+    font-size: 18px;
+}
+
+.lector-update__email{
+    margin: 3vh 0 0 0;
+    width: 80%;
+    height: fit-content;
+    display: flex;
+    flex-direction: column;
+}
+
+.lector-update__email-input{
+    margin: 2vh 0 0 2vw;
+    width: 80%;
+    height: 5vh;
+    padding: 0.5vh 0.5vw 0.5vh 0.5vw;
+    border: 3px solid rgb(107, 0, 169);
+    border-radius: 20px;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 20px;
+}
+
+.lector-update__description{
+    margin: 3vh 0 0 0;
+    width: 80%;
+    height: fit-content;
+    display: flex;
+    flex-direction: column;
+}
+
+.lector-update__description-text{
+    margin: 2vh 0 0 2vw;
+    width: 100%;
+    height: 20vh;
+    border: 3px solid rgb(107, 0, 169);
+    border-radius: 20px;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 20px;
+    padding: 1vh 1vw 1vh 1vw;
+    resize: none;
+}
+
+.lector-update__activity{
+    margin: 3vh 0 0 0;
+    width: fit-content;
+    height: fit-content;
+    display: flex;
+    align-items: center;
+}
+
+.lector-update__activity-label{
+    width: fit-content;
+    height: fit-content;
+    font-family: 'Jost', sans-serif;
+    font-size: 24px;
+}
+
+.lector-update__select-activity{
+    margin-left: 1vw;
+    width: fit-content;
+    height: fit-content;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 20px;
+}
+
+.lector-update__option-activity{
+    font-family: 'Open Sans', sans-serif;
+    font-size: 20px;
+}
+
+.lector-update__submit{
+    width: 85%;
+    height: 5vh;
+    display: flex;
+    justify-content: end;
+    /* border: 1px solid blue; */
+}
+
+.lector-update__btn{
+    width: 9vw;
+    height: 100%;
+    border-radius: 20px;
+    background-color: rgb(0, 0, 180);
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 16px;
+}
+
+.invalid{
+    border: 3px solid red;
+}
+
+.invalid-message{
+    margin: 1vh 0 02vw;
+    width: fit-content;
+    height: 3vh;
+    color: red;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 12px;
+}
+

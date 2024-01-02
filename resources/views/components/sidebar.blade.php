@@ -15,6 +15,9 @@
                     <a href="{{ route('lector.index') }}">
                         <div class="sidebar__option">Специалисты</div>
                     </a>
+                    <a href="{{ route('quiz.index') }}">
+                        <div class="sidebar__option">Опросы</div>
+                    </a>
                 @endif
                 @if (auth()->user()->profile_id === 2)
                     <a href="{{ route('account.change', ['user' => auth()->user()]) }}">
@@ -42,6 +45,12 @@
                     </a>
                     <a href="{{ route('lector.index') }}">
                         <div class="sidebar__option">Лекторы</div>
+                    </a>
+                    <a href="{{ route('quiz.create') }}">
+                        <div class="sidebar__option">Создать опрос</div>
+                    </a>
+                    <a href="{{ route('quiz.index') }}">
+                        <div class="sidebar__option">Опросы</div>
                     </a>
                 @endif
             </div>

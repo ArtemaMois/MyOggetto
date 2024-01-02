@@ -7,4 +7,6 @@ Route::controller(LectorsController::class)->middleware('auth:sanctum')->group(f
     Route::get('/lectors/index', 'index')->name('lector.index');
     Route::get('/lectors/{lector}', 'show')->name('lector.show');
     Route::get('/lectors/{lector}/update', 'change')->name('lector.change');
+    Route::patch('/lectors/{lector}/update', 'update')->name('lector.update');
+    Route::delete('/lectors/{lector}', 'destroy')->name('lector.delete');
 });

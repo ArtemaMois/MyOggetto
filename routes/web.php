@@ -24,3 +24,5 @@ require __DIR__ . "/web_routes/verification/verify.php";
 require __DIR__ . "/web_routes/comment.php";
 require __DIR__ . "/web_routes/lector.php";
 require __DIR__. "/web_routes/event.php";
+require __DIR__ . "/web_routes/quiz.php";
+require __DIR__ . "/web_routes/answer.php";
