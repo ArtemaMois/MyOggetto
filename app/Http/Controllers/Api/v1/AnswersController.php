@@ -22,6 +22,6 @@ class AnswersController extends Controller
     public function destroy(Answer $answer)
     {
         $answer->delete();
-        return responseOk();
+        return 'ok';
     }
 }

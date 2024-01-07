@@ -1,4 +1,4 @@
-@if (auth()->user())
+@if (auth()->user() && auth()->user()->email_verified_at)
     <div class="sidebar">
         <div class="sidebar__body">
             <div class="sidebar__refs">

@@ -29,6 +29,8 @@
     '/resources/css/quiz/quiz-create.css',
     '/resources/css/quiz/quizzes.css',
     '/resources/css/quiz/quiz-info.css',
+    '/resources/css/account/account-verify.css',
+    '/resources/css/auth/forgot-password.css',
     '/resources/js/meetings/meeting-file-btn.js',
     '/resources/js/meetings/delete-files.js',
     '/resources/js/bootstrap.js'])

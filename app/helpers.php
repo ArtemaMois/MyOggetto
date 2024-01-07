@@ -6,10 +6,6 @@ use App\Models\Meeting;
  *
  * @return void
  */
-function responseOk()
-{
-    return response()->json(['status' => 'success']);
-}
 
 /**
   Функция, возвращающая данные для письма о регистрации

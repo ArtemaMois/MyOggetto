@@ -36,5 +36,12 @@
                 <button type="submit" class="account__update-btn">Сохранить</button>
             </div>
         </form>
+        <form action="{{ route('verification.send') }}" method="POST" class="account__verify-email">
+            @csrf
+            <button type="submit" class="account__verify-btn">Подтверждение почты</button>
+        </form>
+        @if (session('status'))
+            <div class="account__verification-message">{{ session('status') }}</div>
+        @endif
     </div>
 @endsection

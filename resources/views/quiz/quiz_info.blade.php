@@ -6,7 +6,7 @@
             <div class="quiz-info__title">{{ $quiz->title }}</div>
             <div class="quiz-info__body-value">{{ $quiz->body }}</div>
         </div>
-        @if (auth()->user()->profile_id == 1)
+        @if (auth()->user()->profile_id == 3)
             {{-- {{ dd($userAnswer) }} --}}
             @if (@empty($userAnswer))
                 <form action="{{ route('answer.create', ['quiz' => $quiz]) }}" class="quiz-info__form" method="POST">

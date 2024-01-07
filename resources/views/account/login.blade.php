@@ -29,7 +29,8 @@
                         @enderror
                     </div>
                 </div>
-                <div class="login-form__submit">
+                <div class="login-form__footer">
+                    <a href="{{ route('password.request') }}" class="login-form__forgot-password">Забыл пароль</a>
                     <button type="submit" class="login-form__button">Войти</button>
                 </div>
             </div>

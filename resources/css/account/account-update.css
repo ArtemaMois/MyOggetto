@@ -10,7 +10,6 @@
 
 .account__header{
     font-size: 1.7vw;
-    margin-left: 2%;
     font-family: 'Open Sans', sans-serif;
     font-weight: 600;
     letter-spacing: 1px;
@@ -23,7 +22,7 @@
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    margin: 3% 0 0 5%;
+    margin: 3% 0 0 0;
 }
 
 .account__name, .account__email, .account__password{
@@ -67,4 +66,41 @@
     background-color: rgb(0, 150, 12);
     font-size: 18px;
     font-family: 'Roboto Mono', sans-serif;
+}
+
+
+.account__verify-email{
+    width: fit-content;
+    height: fit-content;
+}
+
+.account__verify-btn{
+    width: fit-content;
+    height: 5vh;
+    padding: 1vh 1vw 1vh 1vw;
+    border: 2px solid rgb(29, 29, 255);
+    border-radius: 10px;
+    background-color: rgb(29, 29, 255);
+    color: white;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 16px;
+    transition: all .3s;
+}
+
+.account__verify-btn:hover{
+    color: rgb(29, 29, 255);
+    background-color: white;
+}
+
+.account__verification-message{
+    margin: 3vh 0 0 0;
+    width: fit-content;
+    height: fit-content;
+    padding: 1vh 1vw 1vh 1vw;
+    color: rgb(0, 86, 0);
+    border: 2px solid rgb(0, 109, 0);
+    border-radius: 10px;
+    background-color: rgba(0, 173, 0, 0.215);
+    font-family: 'Open Sans', sans-serif;
+    font-size: 15px;
 }

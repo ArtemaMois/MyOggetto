@@ -8,8 +8,9 @@ Route::controller(AccountsController::class)->group(function () {
     Route::post('/store', 'store')->name('store');
     Route::get('/login', 'loginForm')->name('loginForm');
     Route::post('/login', 'login')->name('login');
+    Route::post('/verify', 'verifyNotice')->name('account.verify');
     Route::post('/logout', 'logout')->name('logout');
-    Route::get('/{user}/', 'change')->name('account.change');
+    Route::get('/{user}', 'change')->name('account.change');
     Route::patch('/{user}/update', 'update')->name('update');
     Route::get('/admin/create', 'adminCreateUserForm')->name('account.admin.create');
     Route::post('/admin/create', 'adminCreateUser')->name('account.admin.store');

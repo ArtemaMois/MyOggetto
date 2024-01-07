@@ -26,3 +26,4 @@ require __DIR__ . "/web_routes/lector.php";
 require __DIR__. "/web_routes/event.php";
 require __DIR__ . "/web_routes/quiz.php";
 require __DIR__ . "/web_routes/answer.php";
+require __DIR__ . "/web_routes/password.php";

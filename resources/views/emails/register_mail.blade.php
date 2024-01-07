@@ -11,8 +11,7 @@
 <body>
     <div class="card" style="width: 18rem;">
         <div class="card-body">
-            <p class="card-text">{{ $name }}, cпасибо, что присоеденились к нашей компании</p>
-            <p class="card-text">Надеемся ваша жизнь станет лучше</p>
+            <p class="card-text">{{ $name }}, cпасибо, что присоеденились к нашему проекту</p>
         </div>
     </div>
 </body>

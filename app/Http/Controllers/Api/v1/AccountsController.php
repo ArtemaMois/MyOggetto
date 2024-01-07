@@ -9,6 +9,7 @@ use App\Http\Requests\Account\CreateAccountRequest;
 use App\Http\Requests\Account\SignInAccountRequest;
 use App\Http\Requests\Account\UpdateAccountRequest;
 use App\Facades\Account;
+use App\Http\Requests\Account\AdminCreateAccountRequest;
 use App\Http\Requests\Account\SearchUsersRequest;
 use App\Models\Profile;
 use App\Models\Theme;
@@ -24,11 +25,17 @@ class AccountsController extends Controller
     }
     public function store(CreateAccountRequest $request)
     {
-        dd($request->validated());
         $user = Account::createAccount($request->validated());
-        event(new Registered($user));
-        return view('account.login');
+        // return redirect()->route('verification.notice')->with('message', 'Регистрация прошла успешно.
+        // После подтверждения вашей электронной почты вы можете закрыть это окно');
+        return redirect()->route('login');
     }
+
+    // public function verify(User $user)
+    // {
+    //     event(new Registered($user));
+
+    // }
 
     public function change(User $user)
     {
@@ -55,7 +62,16 @@ class AccountsController extends Controller
         if (!auth()->attempt($request->validated())) {
             return redirect()->back()->withErrors(['error' => 'Неверный логин или пароль']);
         };
+        if (!auth()->user()->email_verified_at) {
+            return redirect()->route('verification.notice');
+        }
         return redirect()->route('meeting.index');
+    }
+
+    public function verifyNotice()
+    {
+        event(new Registered(auth()->user()));
+        return redirect()->back()->with('status', 'Письмо отправлено на почту');
     }
 
     public function logout()
@@ -74,7 +90,7 @@ class AccountsController extends Controller
         ]);
     }
 
-    public function adminCreateUser(CreateAccountRequest $request)
+    public function adminCreateUser(AdminCreateAccountRequest $request)
     {
         $user = Account::adminCreateAccount($request->validated());
         event(new Registered($user));

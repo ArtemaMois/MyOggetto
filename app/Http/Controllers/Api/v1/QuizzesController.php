@@ -41,7 +41,7 @@ class QuizzesController extends Controller
     public function destroy(Quiz $quiz)
     {
         $quiz->delete();
-        return responseOk();
+        return 'ok';
     }
 
     public function getAnswers(Quiz $quiz)
