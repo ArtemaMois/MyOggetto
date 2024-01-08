@@ -72,8 +72,6 @@ class AccountService
             unset($lectorsData['profile_id']);
             unset($lectorsData['password']);
             Lector::query()->create($lectorsData);
-        } else{
-            dd("Не лектор");
         }
         unset($data['theme_id']);
         unset($data['description']);

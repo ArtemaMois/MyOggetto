@@ -1,7 +1,6 @@
-<a
-    href=" @if (auth()->user()->profile_id == 2) {{ route('lector.show', ['lector' => $lector]) }} @endif
-    @if (auth()->user()->profile_id == 1) {{ route('lector.change', ['lector' => $lector]) }}" @endif
-    class="lector__card">
+<a class="lector__card"
+ @if (auth()->user()->profile_id == 3) href="{{ route('lector.show', ['lector' => $lector]) }}" @endif
+    @if (auth()->user()->profile_id == 1) href="{{ route('lector.change', ['lector' => $lector]) }}" @endif>
     <div class="lector__body">
         <div class="lector__content">
             <div class="lector__name">{{ $lector->name }}</div>

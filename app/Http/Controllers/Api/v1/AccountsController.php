@@ -65,7 +65,15 @@ class AccountsController extends Controller
         if (!auth()->user()->email_verified_at) {
             return redirect()->route('verification.notice');
         }
-        return redirect()->route('meeting.index');
+        if (auth()->user()->profile_id === 3) {
+            return redirect()->route('meeting.index');
+        }
+        if (auth()->user()->profile_id === 2) {
+            return redirect()->route('meeting.create');
+        }
+        if (auth()->user()->profile_id === 1) {
+            return redirect()->route('event.create');
+        }
     }
 
     public function verifyNotice()

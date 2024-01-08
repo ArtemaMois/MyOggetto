@@ -14,7 +14,7 @@ class QuizzesController extends Controller
 {
     public function index()
     {
-        $quizzes = Quiz::all();
+        $quizzes = Quiz::query()->orderBy('updated_at', 'desc')->get();
         return view('quiz.quizzes', ['quizzes' => $quizzes]);
     }
 

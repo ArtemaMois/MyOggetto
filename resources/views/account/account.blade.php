@@ -27,21 +27,9 @@
                     </div>
                 @enderror
             </div>
-            <div class="account__password">
-                <label for="account__password-inp" class="account__password-label">Пароль</label>
-                <input type="password" name="password" class="account__password-inp @error('password') is_invalid @enderror"
-                    value="">
-            </div>
             <div class="account__button">
                 <button type="submit" class="account__update-btn">Сохранить</button>
             </div>
         </form>
-        <form action="{{ route('verification.send') }}" method="POST" class="account__verify-email">
-            @csrf
-            <button type="submit" class="account__verify-btn">Подтверждение почты</button>
-        </form>
-        @if (session('status'))
-            <div class="account__verification-message">{{ session('status') }}</div>
-        @endif
     </div>
 @endsection

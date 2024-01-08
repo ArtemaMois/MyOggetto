@@ -13,7 +13,7 @@ class EventsController extends Controller
 {
     public function index()
     {
-        $events = Event::all();
+        $events = Event::query()->orderBy('updated_at', 'desc')->get();
         return view('event.events', ['events' => $events]);
     }
 

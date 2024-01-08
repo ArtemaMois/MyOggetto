@@ -19,9 +19,5 @@ class AnswersController extends Controller
         return redirect()->back();
     }
 
-    public function destroy(Answer $answer)
-    {
-        $answer->delete();
-        return 'ok';
-    }
+
 }

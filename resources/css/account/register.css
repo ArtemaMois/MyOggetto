@@ -7,7 +7,15 @@ button {
     color: inherit;
     background-color: transparent;
     cursor: pointer;
-  }
+}
+
+.register__header{
+    width: 70%;
+    display: flex;
+    justify-content: center;
+    font-family: 'Jost', sans-serif;
+    font-size: 36px;
+}
 
 .register-form{
     margin: 40px;

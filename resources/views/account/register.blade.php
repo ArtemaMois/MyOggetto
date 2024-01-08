@@ -1,6 +1,7 @@
 @extends('templates.main')
 
 @section('content')
+<div class="register__header">Регистрация</div>
     <form action="{{ route('store') }}" method="post" class="register-form">
         @csrf
         <div class="register-form__container">

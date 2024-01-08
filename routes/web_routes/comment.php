@@ -5,5 +5,5 @@ use Illuminate\Support\Facades\Route;
 
 Route::controller(CommentsController::class)->middleware('auth:sanctum')->group(function ()
 {
-    Route::post('/meetings/{meeting}/comments/', 'create')->name('comment.create');
+    Route::post('/meetings/{meeting}/comments/', 'create')->middleware(['auth', 'verified', 'user'])->name('comment.create');//посредник для юзера
 });

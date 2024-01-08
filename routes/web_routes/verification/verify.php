@@ -10,8 +10,19 @@ Route::get('/email/verify', fn () => view(('account.verify_email')))->name('veri
 
 Route::get('/email/verify/{id}/{hash}', function (EmailVerificationRequest $request) {
     $request->fulfill();
-    return redirect()->route('meeting.index');
-})->middleware(['auth','signed'])->name('verification.verify');
+    if (auth()->user()->profile_id === 3)
+    {
+        return redirect()->route('meeting.index');
+    }
+    if(auth()->user()->profile_id === 2)
+    {
+        return redirect()->route('meeting.create');
+    }
+    if(auth()->user()->profile_id === 1)
+    {
+        return redirect()->route('event.create');
+    }
+})->middleware(['auth', 'signed'])->name('verification.verify');
 
 // Route::post('/email/verification-notification', function (Request $request) {
 //     $request->user()->sendEmailVerificationNotification();

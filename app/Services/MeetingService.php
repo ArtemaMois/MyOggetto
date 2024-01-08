@@ -21,7 +21,8 @@ class MeetingService
 
         $data = $request;
         unset($data['uploads']);
-        $data['lector_id'] = Lector::query()->where('email', auth()->user()->email)->first()->id;
+        $lector = Lector::query()->where('email', auth()->user()->email)->first();
+        $data['lector_id'] = $lector->id;
         $meeting = Meeting::query()->create($data);
         if (is_dir('storage/public')) {
             mkdir('storage/public/' . $meeting->id);
