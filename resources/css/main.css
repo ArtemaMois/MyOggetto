@@ -64,5 +64,6 @@ main{
     margin: 3vw 0 0 4vw;
     grid-area: content;
     overflow-x: hidden;
+    margin-bottom: 70px;
     /* height: 150vh; */
 }

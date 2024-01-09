@@ -15,9 +15,7 @@ class GuestAndUserMiddleware
      */
     public function handle(Request $request, Closure $next): Response
     {
-        if(auth()->guest()){
-            abort(404);
-        }
+
         if(!auth()->guest()){
             if((int)auth()->user()->profile_id !== 3){
                 abort(404);

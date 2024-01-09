@@ -4,7 +4,7 @@ use App\Http\Controllers\Api\v1\AccountsController;
 use Illuminate\Support\Facades\Route;
 
 Route::controller(AccountsController::class)->group(function () {
-    Route::get('/create', 'register')->middleware('guest')->name('register');
+    Route::get('/create', 'register')->name('register');
     Route::post('/store', 'store')->name('store');
     Route::get('/login', 'loginForm')->middleware('guest')->name('loginForm');
     Route::post('/login', 'login')->middleware('guest')->name('login');
