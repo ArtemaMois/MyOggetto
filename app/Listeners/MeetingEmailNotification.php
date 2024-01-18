@@ -9,6 +9,7 @@ use PHPMailer\PHPMailer\Exception;
 use PHPMailer\PHPMailer\PHPMailer;
 use App\Facades\Mail;
 use App\Exceptions\Email\ErrorSendingEmailException;
+
 class MeetingEmailNotification
 {
 

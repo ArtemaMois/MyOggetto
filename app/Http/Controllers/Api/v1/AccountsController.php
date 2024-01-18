@@ -26,16 +26,9 @@ class AccountsController extends Controller
     public function store(CreateAccountRequest $request)
     {
         $user = Account::createAccount($request->validated());
-        // return redirect()->route('verification.notice')->with('message', 'Регистрация прошла успешно.
-        // После подтверждения вашей электронной почты вы можете закрыть это окно');
         return redirect()->route('login');
     }
 
-    // public function verify(User $user)
-    // {
-    //     event(new Registered($user));
-
-    // }
 
     public function change(User $user)
     {
